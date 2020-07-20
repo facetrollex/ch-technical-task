@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'readme', component: ReadmeComponent },
   { path: 'basic-cs', component: BasicCsComponent },
   { path: 'search-recipes', component: SearchRecipesComponent },
+  { path: '**', redirectTo: 'readme' },
 ];
 
 @NgModule({
