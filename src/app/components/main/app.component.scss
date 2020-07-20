@@ -1,0 +1,25 @@
+.header {
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  a {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    margin-right: 1%;
+
+    &.active {
+      color: green;
+    }
+  }
+}
+
+.content {
+  padding: 1%;
+  margin: 0 auto;
+  width: 60%;
+  border: 1px dotted black;
+  border-radius: 9px;
+}
