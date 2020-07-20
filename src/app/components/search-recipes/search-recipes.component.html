@@ -1,0 +1,23 @@
+<div class="row">
+  <label>
+    Ingredients:
+    <input type="text" [(ngModel)]="ingredients">
+  </label>
+  <label>
+    Name:
+    <input type="text" [(ngModel)]="name">
+  </label>
+
+  <button type="button" (click)="searchRecipes(true)">Search</button>
+</div>
+<div class="row">
+  <div class="row center" *ngIf="searchData.length && page > 1"><button (click)="less()">Less...</button></div>
+
+  <div class="recipe" *ngFor="let recipe of searchData">
+    <div class="bold"><a href="{{ recipe.href }}" target="_blank">{{ recipe.title }}</a></div>
+    <div><span class="bold">Ingredients: </span>{{ recipe.ingredients }}</div>
+    <div><img src="{{ recipe.thumbnail }}" /></div>
+  </div>
+
+  <div class="center" *ngIf="searchData.length"><button type="button" (click)="more()">More...</button></div>
+</div>

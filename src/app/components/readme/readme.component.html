@@ -1,0 +1,78 @@
+<div class="row bold center">
+  Basic CS
+</div>
+
+<hr/>
+
+<div class="row">
+  <div><b>Tech stack for this task:</b> Typescript, Javascript.</div>
+  <div><b>Libraries:</b> Angular (base structure), big-integer (generate 'power' numbers), ngx-spinner (spinner).</div>
+</div>
+
+<hr/>
+
+<div class="row">
+  <div class="bold">
+    A) Write a function that sorts 11 small numbers (<100) as fast as possible. Estimate how long it would take to execute that function 10 Billion (10^10) times on a normal machine?
+  </div>
+  <div class="row">
+    <ul>
+      <b>Key Points:</b>
+      <li>
+        Quick sort (with random pivot, to get most efficient result) algorithm used. (fastest way for this task)
+      </li>
+      <li>
+        Average execution time (10B times) - 55 seconds.
+      </li>
+      <li>
+        setTimeout is used for show spinner while sorting function is executed.
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="bold">
+    B) Write a function that sorts 10000 powers (a^b) where a and b are random numbers between 100 and 10000? Estimate how long it would take on your machine?
+  </div>
+  <div class="row">
+    <ul>
+      <b>Key Points:</b>
+      <li>
+        Native Array.sort is used (fastest way), also checked - base- 2^8  LSD radix sort, quicksort, but it was not effective.
+      </li>
+      <li>
+        Average execution time (only for sorting) - 0.009 seconds.
+      </li>
+      <li>
+        setTimeout is used for show spinner while generating/sorting function is executed.
+      </li>
+      <li>
+        Most of time on sorting is related on generating 'Power' array.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row bold center">
+  Advanced
+</div>
+
+<hr/>
+
+<div class="row">
+  <ul>
+    <b>Key Points:</b>
+    <li>
+      CORS is disable to run API directly, so im using cors-anywhere lib to call API (https://cors-anywhere.herokuapp.com/)
+    </li>
+    <li>
+      State is saved in LocalStorage.
+    </li>
+    <li>
+      State restored on app loading
+    </li>
+    <li>
+      Infinite scrolling is implemented via buttons (more/less) - to be more interactive.
+    </li>
+  </ul>
+</div>

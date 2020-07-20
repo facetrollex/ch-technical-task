@@ -1,0 +1,35 @@
+<div>
+  <div class="row bold">
+    A) Write a function that sorts 11 small numbers (<100) as fast as possible. Estimate how long it would take to execute that function 10 Billion (10^10) times on a normal machine?
+  </div>
+  <div class="row">
+    <span class="bold">Input:</span>
+    <span>{{ arrayInput | json }}</span>
+    <button type="button" (click)="generate()">Generate</button>
+    <button type="button" (click)="sort()">Sort</button>
+    <button type="button" (click)="sortWithExecution()">Sort 10B times and Show Execution Time</button>
+  </div>
+  <div class="row">
+    <span class="bold">Output: </span>
+    <span *ngIf="sortedResult.length">{{ sortedResult | json }}</span>
+  </div>
+  <div *ngIf="executionTime" class="row">
+    <span class="bold">Execution Time: </span>
+    <span>{{ executionTime }} seconds</span>
+  </div>
+</div>
+
+<div>
+  <div class="row bold">
+    B) Write a function that sorts 10000 powers (a^b) where a and b are random numbers between 100 and 10000? Estimate how long it would take on your machine?
+  </div>
+  <div class="row">
+    <button type="button" (click)="sortArrayOfBigNumbers()">Generate 'Power' Array and Sort</button>
+  </div>
+  <div *ngIf="executionTimeBig" class="row">
+    <span class="bold">Execution Time (sorting only): </span>
+    <span>{{ executionTimeBig }} seconds.</span>
+    <div><span class="bold">Note:</span> to see sorted array please check console.</div>
+  </div>
+</div>
+
